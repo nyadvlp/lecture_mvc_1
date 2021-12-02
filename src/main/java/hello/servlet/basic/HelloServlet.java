@@ -22,13 +22,13 @@ public class HelloServlet extends HttpServlet {
         System.out.println(">>> response = " + response); // org.apache.catalina.connector.ResponseFacade@38b0faa9
 
         // 파라미터 받아오기 (쿼리스트링)
-        String userName = request.getParameter("username");
-        System.out.println(">>> userName : " + userName);
+        String username = request.getParameter("username");
+        System.out.println(">>> userName : " + username);
 
         // 응답 메시지 보내기 - header 정보에 들어감
         response.setContentType("text/plain");
         response.setCharacterEncoding("utf-8");
-        response.getWriter().write("hello, " + userName);
+        response.getWriter().write("hello, " + username);
 
     }
 }
